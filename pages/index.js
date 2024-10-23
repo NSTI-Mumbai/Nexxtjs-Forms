@@ -20,12 +20,14 @@ export async function getStaticProps() {
 
 export default function Home({ forms }) {
   return (
-    <div>
-      <h1>Available Forms</h1>
-      <ul>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <h1 className="text-4xl font-extrabold text-indigo-700 mb-8">Available Forms</h1>
+      <ul className="space-y-4">
         {forms.map((form) => (
-          <li key={form.id}>
-            <Link href={`/forms/${form.id}`}>{form.filename}</Link>
+          <li key={form.id} className="text-lg">
+            <Link href={`/forms/${form.id}`} className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300 font-semibold">
+              {form.filename.replace('.json', '')}
+            </Link>
           </li>
         ))}
       </ul>

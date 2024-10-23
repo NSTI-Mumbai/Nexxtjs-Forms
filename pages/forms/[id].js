@@ -58,23 +58,31 @@ export default function FormPage({ form }) {
   };
 
   return (
-    <div>
-      <h1>{form.title}</h1>
-      <form onSubmit={handleSubmit}>
-        {form.questions.map((question, index) => (
-          <div key={index}>
-            <label>{question.label}</label>
-            <input
-              type={question.type}
-              name={`question-${index}`}
-              placeholder={question.placeholder}
-              onChange={(e) => handleInputChange(e, index)}
-              required
-            />
-          </div>
-        ))}
-        <button type="submit">Submit</button>
-      </form>
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center py-12 px-6 lg:px-8">
+      <div className="w-full max-w-md space-y-8">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">{form.title}</h2>
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          {form.questions.map((question, index) => (
+            <div key={index} className="rounded-md shadow-sm -space-y-px">
+              <label className="block text-sm font-medium text-gray-700 mb-2">{question.label}</label>
+              <input
+                type={question.type}
+                name={`question-${index}`}
+                placeholder={question.placeholder}
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                onChange={(e) => handleInputChange(e, index)}
+                required
+              />
+            </div>
+          ))}
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
