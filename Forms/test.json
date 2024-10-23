@@ -1,0 +1,16 @@
+{
+    "title": "Test Form",
+    "questions": [
+      {
+        "type": "text",
+        "label": "What is your name?",
+        "placeholder": "Enter your name"
+      },
+      {
+        "type": "email",
+        "label": "What is your email?",
+        "placeholder": "Enter your email"
+      }
+    ]
+  }
+  
