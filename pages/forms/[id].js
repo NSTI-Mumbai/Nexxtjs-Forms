@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 const webhookUrl = "https://discord.com/api/webhooks/1298641567585927189/_nUslOfuxt3nrnSydgclqEfqce5Yz5rWP-BWDfEtdeBgioOfpnlJEYW2YS8EKPymrnvK";
 
@@ -33,6 +34,7 @@ export async function getStaticPaths() {
 
 export default function FormPage({ form }) {
   const [formData, setFormData] = useState({});
+  const router = useRouter();
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -46,11 +48,27 @@ export default function FormPage({ form }) {
     e.preventDefault();
 
     try {
-      await axios.post(webhookUrl, {
-        content: `New Form Submission: ${JSON.stringify(formData)}`,
-      });
+      const embed = {
+        embeds: [
+          {
+            title: "New Form Submission",
+            description: `Form Title: **${form.title}**`,
+            color: 7506394,
+            fields: Object.keys(formData).map((key, index) => ({
+              name: `Question ${index + 1}:`,
+              value: `**${form.questions[index].label}**\nAnswer: ${formData[key]}`,
+              inline: false,
+            })),
+            footer: {
+              text: "Form Submission Log",
+            },
+          },
+        ],
+      };
 
-      alert('Form submitted successfully!');
+      await axios.post(webhookUrl, embed);
+
+      router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('There was an error submitting the form.');
