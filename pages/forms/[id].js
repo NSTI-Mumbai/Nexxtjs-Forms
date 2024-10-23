@@ -68,6 +68,11 @@ export default function FormPage({ form }) {
 
       await axios.post(webhookUrl, embed);
 
+      await axios.post('/api/submit-form', {
+        formId: form.title,
+        formData,
+      });
+
       router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
