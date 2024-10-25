@@ -1,0 +1,30 @@
+{
+    "title": "Taxi Drivers",
+    "questions": [
+        {
+            "type": "text",
+            "label": "What is your experience with ride-sharing apps compared to traditional taxi services?",
+            "placeholder": "Experience with ride-sharing vs. traditional"
+        },
+        {
+            "type": "text",
+            "label": "How do you manage fares and customer expectations during high-demand times?",
+            "placeholder": "Managing fares and expectations"
+        },
+        {
+            "type": "text",
+            "label": "What do you think about the current regulations for taxi services?",
+            "placeholder": "Opinions on taxi regulations"
+        },
+        {
+            "type": "text",
+            "label": "Have you faced any issues with traffic congestion on your routes?",
+            "placeholder": "Issues with traffic congestion"
+        },
+        {
+            "type": "text",
+            "label": "What suggestions do you have for improving taxi services in the city?",
+            "placeholder": "Suggestions for taxi service improvements"
+        }
+    ]
+}

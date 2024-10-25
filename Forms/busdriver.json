@@ -1,0 +1,30 @@
+{
+            "title": "Bus Drivers",
+            "questions": [
+                {
+                    "type": "text",
+                    "label": "What routes do you find the most challenging, and why?",
+                    "placeholder": "Challenging routes and reasons"
+                },
+                {
+                    "type": "text",
+                    "label": "How do you handle delays due to traffic or road conditions?",
+                    "placeholder": "Handling delays"
+                },
+                {
+                    "type": "text",
+                    "label": "Have you received any feedback from passengers regarding bus service?",
+                    "placeholder": "Passenger feedback on bus service"
+                },
+                {
+                    "type": "text",
+                    "label": "What safety measures do you think need more attention on the roads?",
+                    "placeholder": "Safety measures needing attention"
+                },
+                {
+                    "type": "text",
+                    "label": "How do you think bus services could be improved for better efficiency?",
+                    "placeholder": "Improvements for bus service"
+                }
+            ]
+        }

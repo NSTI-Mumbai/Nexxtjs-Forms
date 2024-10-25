@@ -1,0 +1,41 @@
+{
+    "title": "Autorickshaw Form",
+    "questions": [
+      {
+        "type": "text",
+        "label": "What is your name?",
+        "placeholder": "Enter your name"
+      },
+      {
+        "type": "email",
+        "label": "What is your email?",
+        "placeholder": "Enter your email"
+      },
+      {
+        "type": "text",
+        "label": "What are the most common challenges you face while driving in the city?",
+        "placeholder": "Common Challenges" 
+      },
+      {
+        "type": "text",
+        "label": "How do you navigate traffic during peak hours?",
+        "placeholder": "Navigation through traffic"
+      },
+      {
+        "type": "text",
+        "label": "Have you noticed any changes in passenger behaviour or demand recently?",
+        "placeholder": "Change in behaviour"
+      },
+      {
+        "type": "text",
+        "label": "What imporvements would you sugggest for the autorickshaw service in the area?",
+        "placeholder": "Improvements for autorickshaw service"
+      },
+      {
+        "type": "text",
+        "label": "How do fare rates affect your daily earnings?",
+        "placeholder": "Frate rates"
+      }
+    ]
+  }
+  
